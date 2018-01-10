@@ -1,4 +1,4 @@
-package leet.p400;
+package leet.p700;
 
 import static org.junit.Assert.*;
 
@@ -8,14 +8,14 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class P485Test {
+public class P717Test {
 
-	int[] input ;
-	int output;
-	P485 p485 = new P485();
+	int[] input = new int[]{1, 1, 0} ,input1 = new int[]{1, 1, 1, 0};
+	P717 p717 = new P717();
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+	
 	}
 
 	@AfterClass
@@ -24,9 +24,6 @@ public class P485Test {
 
 	@Before
 	public void setUp() throws Exception {
-		
-		input = new int[] {1,1,0,1,1,1};
-		output = 3;
 	}
 
 	@After
@@ -35,8 +32,10 @@ public class P485Test {
 
 	@Test
 	public void test() {
-		int result = p485.findMaxConsecutiveOnes(input);
-		assertEquals(output,result);
+		boolean result = p717.isOneBitCharacter(input1);
+		assertEquals(result ,false);
+		result = p717.isOneBitCharacter(input);
+		assertEquals(result ,true);
 	}
 
 }
